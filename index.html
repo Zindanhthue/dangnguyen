@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Đặng Nguyên Home</title>
-  <link rel="icon" href="https://i.pinimg.com/originals/84/77/c5/8477c5704f99d7460b8f2bc28b7e5cf2.gif">
+  <link rel="icon" href="https://i.pinimg.com/originals/84/77/c5/8477c5704f99d7460b8f2bc28b7e5cf2.gif" />
   <style>
     * {
       box-sizing: border-box;
       transition: all 0.3s ease;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://i.imgur.com/zmXnI4P.gif') no-repeat center center fixed;
+      font-family: "Segoe UI", sans-serif;
+      background: url("https://i.imgur.com/zmXnI4P.gif") no-repeat center center fixed;
       background-size: cover;
       color: white;
       overflow: hidden;
@@ -25,7 +27,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.8);
+      background-color: rgba(0, 0, 0, 0.8);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -39,10 +41,7 @@
       font-weight: bold;
       max-width: 90%;
       line-height: 1.6;
-      text-shadow:
-        2px 2px 5px #000,
-        0 0 10px #00ffff,
-        0 0 20px #00ffff;
+      text-shadow: 2px 2px 5px #000, 0 0 10px #00ffff, 0 0 20px #00ffff;
       color: #ffffff;
     }
 
@@ -66,6 +65,26 @@
       color: #000;
     }
 
+    .enter-button {
+      display: none;
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #0d6efd, #00ccff);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ccff;
+      border: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .enter-button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #0847d1, #0099cc);
+    }
+
     .main-content {
       display: none;
       flex-direction: column;
@@ -81,7 +100,7 @@
     .avatar-frame {
       width: 150px;
       height: 150px;
-      background-image: url('https://thanhdieu.com/assets/img/mong-vuot-rong.png');
+      background-image: url("https://thanhdieu.com/assets/img/mong-vuot-rong.png");
       background-size: cover;
       background-position: center;
       position: relative;
@@ -98,7 +117,7 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     }
 
     .name {
@@ -109,7 +128,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      text-shadow: 2px 2px 6px #000, 0 0 10px #FFD700;
+      text-shadow: 2px 2px 6px #000, 0 0 10px #ffd700;
     }
 
     .name img {
@@ -145,7 +164,7 @@
       height: 40px;
       border-radius: 50%;
       border: 2px solid white;
-      box-shadow: 0 0 12px rgba(0,255,255,0.6);
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
     }
 
     .fb-link:hover {
@@ -170,7 +189,7 @@
       font-size: 16px;
       border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
       font-weight: bold;
       text-align: center;
       transition: transform 0.3s ease, background 0.3s ease;
@@ -186,7 +205,7 @@
       background: rgba(255, 255, 255, 0.15);
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
     }
 
     .qr-section input {
@@ -226,8 +245,8 @@
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      color: #FFD700;
-      text-shadow: 0 0 10px #FFD700;
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffd700;
     }
 
     .bubble {
@@ -240,49 +259,138 @@
     }
 
     @keyframes rise {
-      0% { opacity: 1; transform: translateY(0) scale(1); }
-      100% { opacity: 0; transform: translateY(-300px) scale(1.2); }
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-300px) scale(1.2);
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .main-content {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      .button {
+        width: 90%;
+        font-size: 15px;
+      }
+
+      .qr-section input {
+        width: 100%;
+      }
+
+      .qr-section img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .view-counter {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      user-select: none;
+    }
+
+    .music-control {
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #0d6efd, #00ccff);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ccff;
+      border: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .music-control:hover {
+      background: linear-gradient(45deg, #0847d1, #0099cc);
+      transform: scale(1.1);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .music-control {
+        width: 90%;
+        font-size: 15px;
+      }
+      .view-counter {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="loading-screen" id="loading">
     <div class="loading-message">
-      🚀 DNN - Nhà Phát Triển DNN, đang trong giai đoạn học tập.<br>
-      Mặc dù chưa tài giỏi, nhưng DNN luôn nỗ lực<br>
+      🚀 DNN - Nhà Phát Triển DNN, đang trong giai đoạn học tập.<br />
+      Mặc dù chưa tài giỏi, nhưng DNN luôn nỗ lực<br />
       mang đến nhiều ích lợi nhất cho mọi người! 🚀
     </div>
     <div class="progress-bar">
       <div class="progress-fill" id="progress">0%</div>
     </div>
+    <button class="enter-button" id="enterBtn">Vào Web🥰</button>
   </div>
 
   <div class="main-content" id="main">
     <div class="avatar-frame">
-      <img class="avatar-inner" src="https://i.pinimg.com/originals/84/77/c5/8477c5704f99d7460b8f2bc28b7e5cf2.gif" alt="Avatar">
+      <img
+        class="avatar-inner"
+        src="https://i.pinimg.com/originals/84/77/c5/8477c5704f99d7460b8f2bc28b7e5cf2.gif"
+        alt="Avatar"
+      />
     </div>
-    <div class="name">Đặng Nguyên <img src="https://thanhdieu.com/assets/img/icon/tick.png" alt="Tick"></div>
+    <div class="name">
+      Đặng Nguyên <img src="https://thanhdieu.com/assets/img/icon/tick.png" alt="Tick" />
+    </div>
     <div class="desc">Nhà phát triển - I Love IT</div>
     <div class="desc">Cần Được FeedBack Để Cải Thiện🤧</div>
-    <a class="fb-link" href="https://www.facebook.com/angnguyen.522516" target="_blank" rel="noopener noreferrer">
-      <img class="fb-logo" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+    <a
+      class="fb-link"
+      href="https://www.facebook.com/angnguyen.522516"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img class="fb-logo" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" />
     </a>
 
     <div class="app-section">
-      <a class="button" href="https://www.mediafire.com/file/nacd3fxzo4vc5da/DnnNix.rar/file" target="_blank">⬇️ Tải APP DnnNix</a>
-      <a class="button" href="https://www.youtube.com/watch?v=upiIOUdsfdI" target="_blank">⬇️ Tải Menu Đọc Truyện(Ra Sớm)</a>
+      <a
+        class="button"
+        href="https://www.mediafire.com/file/nacd3fxzo4vc5da/DnnNix.rar/file"
+        target="_blank"
+        >⬇️ Tải APP DnnNix</a
+      >
+      <a class="button" href="https://www.youtube.com/watch?v=upiIOUdsfdI" target="_blank"
+        >⬇️ Tải Menu Đọc Truyện(Ra Sớm)</a
+      >
     </div>
 
     <div class="qr-section">
-      <input type="text" id="text" placeholder="Link hoặc văn bản">
-      <br>
+      <input type="text" id="text" placeholder="Link hoặc văn bản" />
+      <br />
       <button onclick="taoQR()">Tạo mã QR</button>
-      <br>
-      <img id="qrImage" src="" alt="QR Code">
+      <br />
+      <img id="qrImage" src="" alt="QR Code" />
     </div>
+
+    <!-- View counter -->
+    <div class="view-counter" id="viewCounter">
+      👁️ Lượt truy cập: 0
+    </div>
+    <button class="music-control" id="musicControl">▶️ Bật Nhạc Nền</button>
 
     <div class="credit">© 2025 by <strong>DNN</strong></div>
   </div>
+
+  <audio id="bgMusic" src="https://r2.guns.lol/81a7e895-5a2e-4b02-be19-870a01024e35.mp3" loop></audio>
 
   <script>
     function taoQR() {
@@ -294,7 +402,9 @@
         return;
       }
 
-      qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(text);
+      qrImage.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+        encodeURIComponent(text);
     }
 
     const messages = [
@@ -305,41 +415,81 @@
       "🚀 Thành công đang chờ bạn!",
       "💖 Bạn thật tuyệt vời!",
       "🛡️ ILOVEU",
-      "🏆 Chúc Bạn Đạt Được Giấc Mơ Mà Mình Mong Muốn ! ",
+      "🏆 Chúc Bạn Đạt Được Giấc Mơ Mà Bạn Muốn!",
     ];
 
-    const createBubble = () => {
-      const bubble = document.createElement('div');
-      bubble.classList.add('bubble');
-      bubble.innerText = messages[Math.floor(Math.random() * messages.length)];
-      bubble.style.left = Math.random() * 80 + 10 + '%';
-      bubble.style.top = '90%';
-      bubble.style.fontSize = (Math.random() * 8 + 14) + 'px';
+    function createBubble() {
+      const bubble = document.createElement("span");
+      bubble.classList.add("bubble");
+      bubble.textContent =
+        messages[Math.floor(Math.random() * messages.length)];
+      bubble.style.left = Math.random() * window.innerWidth + "px";
+      bubble.style.top = window.innerHeight + 20 + "px";
+      bubble.style.fontSize = 12 + Math.random() * 18 + "px";
+      bubble.style.opacity = Math.random() * 0.6 + 0.4;
       document.body.appendChild(bubble);
-      setTimeout(() => bubble.remove(), 8000);
-    };
+
+      setTimeout(() => {
+        bubble.remove();
+      }, 3000);
+    }
+
+    setInterval(createBubble, 400);
 
     let progress = 0;
-    const progressBar = document.getElementById('progress');
-    const loadingScreen = document.getElementById('loading');
-    const mainContent = document.getElementById('main');
+    const progressBar = document.getElementById("progress");
+    const loadingScreen = document.getElementById("loading");
+    const mainContent = document.getElementById("main");
+    const enterBtn = document.getElementById("enterBtn");
+    const bgMusic = document.getElementById("bgMusic");
+    const musicControl = document.getElementById("musicControl");
+    const viewCounter = document.getElementById("viewCounter");
 
-    const interval = setInterval(() => {
-      if (progress < 99) {
-        progress++;
-        progressBar.style.width = progress + '%';
-        progressBar.innerText = progress + '%';
+    function updateViewCounter() {
+      let visits = localStorage.getItem("dnnVisits");
+      visits = visits ? parseInt(visits) : 0;
+      visits++;
+      localStorage.setItem("dnnVisits", visits);
+      viewCounter.textContent = "👁️ Đã Truy Cập: " + visits.toLocaleString();
+    }
+
+    updateViewCounter();
+
+    function increaseProgress() {
+      if (progress < 100) {
+        progress += 1 + Math.random() * 3;
+        if (progress > 100) progress = 100;
+        progressBar.style.width = progress + "%";
+        progressBar.textContent = Math.floor(progress) + "%";
+        setTimeout(increaseProgress, 40);
       } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          loadingScreen.style.display = 'none';
-          mainContent.style.display = 'flex';
-        }, 3000);
+        enterBtn.style.display = "inline-block";
       }
-    }, 40);
+    }
 
-    setInterval(createBubble, 1000);
-    document.body.addEventListener('click', createBubble);
+    musicControl.addEventListener("click", () => {
+      if (bgMusic.paused) {
+        bgMusic.play().catch((e) => {
+          console.warn("Không thể phát nhạc tự động:", e);
+        });
+        musicControl.textContent = "⏸️ Tắt Nhạc Nền";
+      } else {
+        bgMusic.pause();
+        musicControl.textContent = "▶️ Bật Nhạc Nền";
+      }
+    });
+
+    enterBtn.addEventListener("click", () => {
+      bgMusic.play().catch((e) => {
+        console.warn("Không thể phát nhạc tự động:", e);
+      });
+
+      loadingScreen.style.display = "none";
+      mainContent.style.display = "flex";
+      document.body.style.overflow = "auto";
+    });
+
+    increaseProgress();
   </script>
 </body>
 </html>
