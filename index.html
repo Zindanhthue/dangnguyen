@@ -92,11 +92,22 @@
       text-align: center;
       padding: 20px;
       position: relative;
-      height: 100vh;
-      max-width: 400px;
-      margin: auto;
+      height: auto; /* dùng auto thay vì 100vh */
+      width: 100%;
+      max-width: none; /* xóa giới hạn chiều rộng */
+      margin: 0 auto;
     }
+    @media (max-width: 600px) {
+      .avatar-frame {
+        width: 120px;
+        height: 120px;
+      }
 
+      .avatar-inner {
+        width: 80px;
+        height: 80px;
+      }
+    }
     .avatar-frame {
       width: 150px;
       height: 150px;
